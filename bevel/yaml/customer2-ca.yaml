@@ -1,0 +1,751 @@
+---
+# Source: hlf-ca/templates/secret--ca.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: customer2-ca--ca
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+type: Opaque
+data: {}
+---
+# Source: hlf-ca/templates/secret--msp-cryptomaterial.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: customer2-ca--msp-cryptomaterial
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+type: Opaque
+data:
+  keyfile: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR0hBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJHMHdhd0lCQVFRZ2xweHBOeGhha0FWblpZTTAKR2ZNWGhDN1N5TG5tU1FBMzIvWUM0MkVuSUVtaFJBTkNBQVI0QW53Z3Q1MXN1Ny9wcGd4Ti9qNElONkE4REUwbApydnJreWhmZlIxQjNJK2kzRGZHM3M3ekE4YTArckthVHhzbUlUV2EwQnhwWDFpY2dTUkNNWGhTYwotLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tCg=="
+  certfile:  "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNRVENDQWVhZ0F3SUJBZ0lSQUtaN3RESjhiVjhDUFROTWFwTmdsVmN3Q2dZSUtvWkl6ajBFQXdJd2FqRUwKTUFrR0ExVUVCaE1DUlZNeEVUQVBCZ05WQkFjVENFRnNhV05oYm5SbE1SRXdEd1lEVlFRSkV3aEJiR2xqWVc1MApaVEVaTUJjR0ExVUVDaE1RUzNWdVp5QkdkU0JUYjJaMGQyRnlaVEVOTUFzR0ExVUVDeE1FVkdWamFERUxNQWtHCkExVUVBeE1DWTJFd0hoY05Nak14TVRBM01EY3dPREU0V2hjTk16TXhNVEE0TURjd09ERTRXakJxTVFzd0NRWUQKVlFRR0V3SkZVekVSTUE4R0ExVUVCeE1JUVd4cFkyRnVkR1V4RVRBUEJnTlZCQWtUQ0VGc2FXTmhiblJsTVJrdwpGd1lEVlFRS0V4QkxkVzVuSUVaMUlGTnZablIzWVhKbE1RMHdDd1lEVlFRTEV3UlVaV05vTVFzd0NRWURWUVFECkV3SmpZVEJaTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEEwSUFCSGdDZkNDM25XeTd2K21tREUzK1BnZzMKb0R3TVRTV3UrdVRLRjk5SFVIY2o2TGNOOGJlenZNRHhyVDZzcHBQR3lZaE5aclFIR2xmV0p5QkpFSXhlRkp5agpiVEJyTUE0R0ExVWREd0VCL3dRRUF3SUJwakFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQWdZSUt3WUJCUVVICkF3RXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QXBCZ05WSFE0RUlnUWdQcWg3SjhNd01LKzV1eEFzVEorNWN1dzEKd0lQQk1wL3Z1dzM2S1FCb3E4SXdDZ1lJS29aSXpqMEVBd0lEU1FBd1JnSWhBTktGeGd4ZURPU1RoVVB3dGtHVgpyRzhrZHF5Qm5TeStzcHV6WUNmQkExQkVBaUVBaWNiMmdyeUxxeEY5SGNnRFQzZEdYTEorSDM0bVh2TFV0cXBwCjU1cjgwT2s9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+  chainfile:  ""
+---
+# Source: hlf-ca/templates/secret--msp-tls-cryptomaterial.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: customer2-ca--msp-tls-cryptomaterial
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+type: Opaque
+data:
+  keyfile: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR0hBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJHMHdhd0lCQVFRZzBuWkJlTDZhOTY3Slo1M0cKQlQyaWFuMS85cStyYndXZVlWSVZlbzY0MU1HaFJBTkNBQVJTeDN2aW1zQVJtVFE4Y3AzWU5CZiswRUczT2JTTgp1ZTJDOE9vZjFlN3NXdUQ2aGZrZmI3MVpzb3hNamhvM3NrWEZ4ZzVCZHkvWGxFUWprV1l4TUhBWgotLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tCg=="
+  certfile:  "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNSVENDQWV5Z0F3SUJBZ0lSQU9HVTJ4U0dpdzRBYWlMQkk2RStkYVF3Q2dZSUtvWkl6ajBFQXdJd2JURUwKTUFrR0ExVUVCaE1DUlZNeEVUQVBCZ05WQkFjVENFRnNhV05oYm5SbE1SRXdEd1lEVlFRSkV3aEJiR2xqWVc1MApaVEVaTUJjR0ExVUVDaE1RUzNWdVp5QkdkU0JUYjJaMGQyRnlaVEVOTUFzR0ExVUVDeE1FVkdWamFERU9NQXdHCkExVUVBeE1GZEd4elkyRXdIaGNOTWpNeE1UQTNNRGN3T0RFNFdoY05Nek14TVRBNE1EY3dPREU0V2pCdE1Rc3cKQ1FZRFZRUUdFd0pGVXpFUk1BOEdBMVVFQnhNSVFXeHBZMkZ1ZEdVeEVUQVBCZ05WQkFrVENFRnNhV05oYm5SbApNUmt3RndZRFZRUUtFeEJMZFc1bklFWjFJRk52Wm5SM1lYSmxNUTB3Q3dZRFZRUUxFd1JVWldOb01RNHdEQVlEClZRUURFd1YwYkhOallUQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJGTEhlK0thd0JHWk5EeHkKbmRnMEYvN1FRYmM1dEkyNTdZTHc2aC9WN3V4YTRQcUYrUjl2dlZteWpFeU9HamV5UmNYR0RrRjNMOWVVUkNPUgpaakV3Y0JtamJUQnJNQTRHQTFVZER3RUIvd1FFQXdJQnBqQWRCZ05WSFNVRUZqQVVCZ2dyQmdFRkJRY0RBZ1lJCkt3WUJCUVVIQXdFd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBcEJnTlZIUTRFSWdRZ3N0SWU2a1dsOEQxNzhrbEsKb1QxeXZpRjBFTUduMENhWm5WaHBBRlJLb2drd0NnWUlLb1pJemowRUF3SURSd0F3UkFJZ1RXdy9tZlVxaFFIYwo3ZFhNOHZuOG5zTG1JUElMNDlpblRIT0ZCYnRBTTdvQ0lIK2sxc1Q3NjBNMmJmYzlUdWVhbXBUdUVoRlEvT0tUCmRuV01wbUFvZ1FDMQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+  chainfile:  ""
+---
+# Source: hlf-ca/templates/secret--tls-cryptomaterial.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: customer2-ca--tls-cryptomaterial
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+type: Opaque
+data:
+  tls.key: "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR0hBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJHMHdhd0lCQVFRZ3FxdFJYaksxYll2d29kV2YKV04ybWxIMHhOOGVMUzdYUCtNd01vVElHRkFpaFJBTkNBQVNHSlNjWHZTOGdybFh0NEtpWkV0SzhaUCs1Z3ZWdAoyV1QvRTZoL29DV1p1cVVpNzh2anR1cW5LRFB6RU41SmloVzVnbmkrSVZHY21ncTZGU1BacytzbAotLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tCg=="
+  tls.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNpakNDQWpDZ0F3SUJBZ0lSQUxtd1FmNnQyQzZPWHBGc0F6OG1BcU13Q2dZSUtvWkl6ajBFQXdJd1VqRVQKTUJFR0ExVUVCaE1LUTJGc2FXWnZjbTVwWVRFSk1BY0dBMVVFQnhNQU1Ra3dCd1lEVlFRSkV3QXhGREFTQmdOVgpCQW9UQzBoNWNHVnliR1ZrWjJWeU1ROHdEUVlEVlFRTEV3WkdZV0p5YVdNd0hoY05Nak14TVRBM01EY3dPREU0CldoY05Nek14TVRBNE1EY3dPREU0V2pCU01STXdFUVlEVlFRR0V3cERZV3hwWm05eWJtbGhNUWt3QndZRFZRUUgKRXdBeENUQUhCZ05WQkFrVEFERVVNQklHQTFVRUNoTUxTSGx3WlhKc1pXUm5aWEl4RHpBTkJnTlZCQXNUQmtaaApZbkpwWXpCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OUF3RUhBMElBQklZbEp4ZTlMeUN1VmUzZ3FKa1MwcnhrCi83bUM5VzNaWlA4VHFIK2dKWm02cFNMdnkrTzI2cWNvTS9NUTNrbUtGYm1DZUw0aFVaeWFDcm9WSTltejZ5V2oKZ2VZd2dlTXdEZ1lEVlIwUEFRSC9CQVFEQWdHbU1CMEdBMVVkSlFRV01CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRgpCUWNEQVRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUNrR0ExVWREZ1FpQkNDUDEwdWFKWEhBMytXUHJlQnFCZ1BHCmgxSnJ5emRPeEcxbG4yMlRMdzNKRVRCMkJnTlZIUkVFYnpCdGdnbHNiMk5oYkdodmMzU0NER04xYzNSdmJXVnkKTWkxallZSWFZM1Z6ZEc5dFpYSXlMV05oTG1OMWMzUnZiV1Z5TWkxdVpYU0NNR05oTG1OMWMzUnZiV1Z5TWkxdQpaWFF1YjNKbk0zQnliM2g1TG5Cb2IyVnVhWGhpYkc5amEyTm9ZV2x1TG1OdmJZY0Vmd0FBQVRBS0JnZ3Foa2pPClBRUURBZ05JQURCRkFpRUF3RVdQSS8rTFQwT3FQUi9VZ1dQUGRyTUFDVmhmL3k5V1N1aVVCTFFJRk5VQ0lEckEKUmVWOGVFYlkrc0JCa0M4Qy9rWmJEUDFpbk0vUG5LeklHbzJ3ZDVQbQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+---
+# Source: hlf-ca/templates/configmap--ca.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customer2-ca--ca
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+data:
+  GODEBUG: "netdns=go"
+  FABRIC_CA_HOME: /var/hyperledger/fabric-ca
+  SERVICE_DNS: 0.0.0.0  # Point to itself
+---
+# Source: hlf-ca/templates/configmap--config-tls.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customer2-ca--config-tls
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+data:
+  fabric-ca-server-config.yaml: |
+    tls:
+      certfile: /tmp/data/ordererca/tlsca/tls-cert.pem
+      clientauth:
+        type: noclientcert
+      enabled: true
+      keyfile: /tmp/data/ordererca/tlsca/tls-key.pem
+
+
+    affiliations:
+      []
+
+    bccsp:
+      default: SW
+      sw:
+        hash: SHA2
+        security: "256"
+
+    ca:
+      name: tlsca
+      # Key file (is only used to import a private key into BCCSP)
+      keyfile: /var/hyperledger/fabric-ca/msp-tls-secret/keyfile
+      # Certificate file (default: ca-cert.pem)
+      certfile: /var/hyperledger/fabric-ca/msp-tls-secret/certfile
+      chainfile:
+
+    crlsizelimit: 
+    db:
+      type: sqlite3
+      datasource: fabric-ca-server.db
+      tls:
+          enabled: false
+          certfiles:
+          client:
+            certfile:
+            keyfile:
+    cfg:
+      affiliations:
+        allowRemove: true
+      identities:
+        allowRemove: true
+    cors:
+      enabled: false
+      origins:
+        - '*'
+    crl:
+      expiry: 24h
+    csr:
+      ca:
+        expiry: 131400h
+        pathlength: 0
+      cn: tlsca
+      hosts:
+      - localhost
+      - ca.customer2-net.org3proxy.phoenixblockchain.com
+      names:
+      - C: US
+        L: ""
+        O: Hyperledger
+        OU: North Carolina
+        ST: ""
+
+    intermediate:
+      parentServer:
+        caName: ""
+        url: ""
+    ldap:
+      attribute:
+        converters:
+          - {}
+        maps:
+          groups:
+            - {}
+        names:
+          - uid
+          - member
+      tls:
+        client: {}
+      url: ldap://<adminDN>:<adminPassword>@<host>:<port>/<base>
+    registry:
+      identities:
+      - affiliation: ""
+        attrs:
+          hf.AffiliationMgr: true
+          hf.GenCRL: true
+          hf.IntermediateCA: true
+          hf.Registrar.Attributes: '*'
+          hf.Registrar.DelegateRoles: '*'
+          hf.Registrar.Roles: '*'
+          hf.Revoker: true
+        name: enroll
+        pass: enrollpw
+        type: client
+      maxenrollments: -1
+    signing:
+      default:
+        expiry: 8760h
+        usage:
+        - digital signature
+      profiles:
+        ca:
+          caconstraint:
+            isCA: true
+            maxPathLen: 0
+          expiry: 43800h
+          usage:
+          - cert sign
+          - crl sign
+        tls:
+          expiry: 8760h
+          usage:
+          - signing
+          - key encipherment
+          - server auth
+          - client auth
+          - key agreement
+
+    operations:
+      # host and port for the operations server
+      listenAddress: 0.0.0.0:9443
+
+      # TLS configuration for the operations endpoint
+      tls:
+        # TLS enabled
+        enabled: false
+
+        # path to PEM encoded server certificate for the operations server
+        cert:
+          file: tls/server.crt
+
+        # path to PEM encoded server key for the operations server
+        key:
+          file: tls/server.key
+
+        # require client certificate authentication to access all resources
+        clientAuthRequired: false
+
+        # paths to PEM encoded ca certificates to trust for client authentication
+        clientRootCAs:
+          files: []
+---
+# Source: hlf-ca/templates/configmap--config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customer2-ca--config
+  labels:
+
+      app: hlf-ca
+      heritage: "Helm"
+      release: "customer2-ca"
+      chart: hlf-ca-1.3.0
+data:
+  ca.yaml: |
+    #############################################################################
+    #   This is a configuration file for the fabric-ca-server command.
+    #############################################################################
+    version: "1.4.9"
+    # Server's listening port
+    port: 7054
+    # Enables debug logging
+    debug: false
+    # Size limit of an acceptable CRL in bytes (default: 512000)
+    crlsizelimit: 512000
+    #############################################################################
+    #  TLS section
+    #############################################################################
+    tls:
+      # Enable TLS
+      enabled: true
+      # TLS for the server's listening port
+      certfile: /var/hyperledger/tls/secret/tls.crt
+      keyfile: /var/hyperledger/tls/secret/tls.key
+      clientauth:
+        # Supported types: NoClientCert, RequestClientCert, RequireAnyClientCert, VerifyClientCertIfGiven and RequireAndVerifyClientCert.
+        type: noclientcert
+        # List of root certificate authorities used when verifying client certificates
+        certfiles:
+    #############################################################################
+    #  The CA section contains information related to the Certificate Authority
+    #  including the name of the CA, which should be unique for all members
+    #  of a blockchain network.  It also includes the key and certificate files
+    #  used when issuing enrollment certificates (ECerts) and transaction
+    #  certificates (TCerts).
+    #  The chainfile (if it exists) contains the certificate chain which
+    #  should be trusted for this CA, where the 1st in the chain is always the
+    #  root CA certificate.
+    #############################################################################
+    ca:
+      # Name of this CA
+      name: ca
+      # Key file (is only used to import a private key into BCCSP)
+      keyfile: /var/hyperledger/fabric-ca/msp-secret/keyfile
+      # Certificate file (default: ca-cert.pem)
+      certfile: /var/hyperledger/fabric-ca/msp-secret/certfile
+      # Chain file
+      chainfile:
+
+    metrics:
+      provider: prometheus
+      statsd:
+        address: 127.0.0.1:8125
+        network: udp
+        prefix: server
+        writeInterval: 10s
+
+    #############################################################################
+    #  The gencrl REST endpoint is used to generate a CRL that contains revoked
+    #  certificates. This section contains configuration options that are used
+    #  during gencrl request processing.
+    #############################################################################
+    crl:
+      expiry: 24h
+    #############################################################################
+    #  The registry section controls how the fabric-ca-server does two things:
+    #  1) authenticates enrollment requests which contain a username and password
+    #     (also known as an enrollment ID and secret).
+    #  2) once authenticated, retrieves the identity's attribute names and
+    #     values which the fabric-ca-server optionally puts into TCerts
+    #     which it issues for transacting on the Hyperledger Fabric blockchain.
+    #     These attributes are useful for making access control decisions in
+    #     chaincode.
+    #  There are two main configuration options:
+    #  1) The fabric-ca-server is the registry.
+    #     This is true if "ldap.enabled" in the ldap section below is false.
+    #  2) An LDAP server is the registry, in which case the fabric-ca-server
+    #     calls the LDAP server to perform these tasks.
+    #     This is true if "ldap.enabled" in the ldap section below is true,
+    #     which means this "registry" section is ignored.
+    #############################################################################
+    registry:
+      identities:
+      - affiliation: ""
+        attrs:
+          hf.AffiliationMgr: true
+          hf.GenCRL: true
+          hf.IntermediateCA: true
+          hf.Registrar.Attributes: '*'
+          hf.Registrar.DelegateRoles: '*'
+          hf.Registrar.Roles: '*'
+          hf.Revoker: true
+        name: enroll
+        pass: enrollpw
+        type: client
+      maxenrollments: -1
+    #############################################################################
+    #  Database section
+    #  Supported types are: "sqlite3", "postgres", and "mysql".
+    #  The datasource value depends on the type.
+    #  If the type is "sqlite3", the datasource value is a file name to use
+    #  as the database store.  Since "sqlite3" is an embedded database, it
+    #  may not be used if you want to run the fabric-ca-server in a cluster.
+    #  To run the fabric-ca-server in a cluster, you must choose "postgres"
+    #  or "mysql".
+    #############################################################################
+    db:
+      type: sqlite3
+      datasource: fabric-ca-server.db
+      tls:
+          enabled: false
+          certfiles:
+          client:
+            certfile:
+            keyfile:
+    #############################################################################
+    #  LDAP section
+    #  If LDAP is enabled, the fabric-ca-server calls LDAP to:
+    #  1) authenticate enrollment ID and secret (i.e. username and password)
+    #     for enrollment requests;
+    #  2) To retrieve identity attributes
+    #############################################################################
+    ldap:
+       # Enables or disables the LDAP client (default: false)
+       # If this is set to true, the "registry" section is ignored.
+       enabled: false
+       # The URL of the LDAP server
+       url: ldap://<adminDN>:<adminPassword>@<host>:<port>/<base>
+       # TLS configuration for the client connection to the LDAP server
+       tls:
+          certfiles:
+          client:
+             certfile:
+             keyfile:
+       # Attribute related configuration for mapping from LDAP entries to Fabric CA attributes
+       attribute:
+          # 'names' is an array of strings containing the LDAP attribute names which are
+          # requested from the LDAP server for an LDAP identity's entry
+          names: ['uid','member']
+          # The 'converters' section is used to convert an LDAP entry to the value of
+          # a fabric CA attribute.
+          # For example, the following converts an LDAP 'uid' attribute
+          # whose value begins with 'revoker' to a fabric CA attribute
+          # named "hf.Revoker" with a value of "true" (because the boolean expression
+          # evaluates to true).
+          #    converters:
+          #       - name: hf.Revoker
+          #         value: attr("uid") =~ "revoker*"
+          converters:
+             - name:
+               value:
+          # The 'maps' section contains named maps which may be referenced by the 'map'
+          # function in the 'converters' section to map LDAP responses to arbitrary values.
+          # For example, assume a user has an LDAP attribute named 'member' which has multiple
+          # values which are each a distinguished name (i.e. a DN). For simplicity, assume the
+          # values of the 'member' attribute are 'dn1', 'dn2', and 'dn3'.
+          # Further assume the following configuration.
+          #    converters:
+          #       - name: hf.Registrar.Roles
+          #         value: map(attr("member"),"groups")
+          #    maps:
+          #       groups:
+          #          - name: dn1
+          #            value: peer
+          #          - name: dn2
+          #            value: client
+          # The value of the user's 'hf.Registrar.Roles' attribute is then computed to be
+          # "peer,client,dn3".  This is because the value of 'attr("member")' is
+          # "dn1,dn2,dn3", and the call to 'map' with a 2nd argument of
+          # "group" replaces "dn1" with "peer" and "dn2" with "client".
+          maps:
+             groups:
+                - name:
+                  value:
+    #############################################################################
+    # Affiliations section, specified as hierarchical maps.
+    # Note: Affiliations are case sensitive except for the non-leaf affiliations.
+    #############################################################################
+    affiliations:
+      []
+    #############################################################################
+    #  Signing section
+    #
+    #  The "default" subsection is used to sign enrollment certificates;
+    #  the default expiration ("expiry" field) is "8760h", which is 1 year in hours.
+    #
+    #  The "ca" profile subsection is used to sign intermediate CA certificates;
+    #  the default expiration ("expiry" field) is "43800h" which is 5 years in hours.
+    #  Note that "isca" is true, meaning that it issues a CA certificate.
+    #  A maxpathlen of 0 means that the intermediate CA cannot issue other
+    #  intermediate CA certificates, though it can still issue end entity certificates.
+    #  (See RFC 5280, section 4.2.1.9)
+    #
+    #  The "tls" profile subsection is used to sign TLS certificate requests;
+    #  the default expiration ("expiry" field) is "8760h", which is 1 year in hours.
+    #############################################################################
+    signing:
+      default:
+        expiry: 8760h
+        usage:
+        - digital signature
+      profiles:
+        ca:
+          caconstraint:
+            isCA: true
+            maxPathLen: 0
+          expiry: 43800h
+          usage:
+          - cert sign
+          - crl sign
+        tls:
+          expiry: 8760h
+          usage:
+          - signing
+          - key encipherment
+          - server auth
+          - client auth
+          - key agreement
+
+    ###########################################################################
+    #  Certificate Signing Request (CSR) section.
+    #  This controls the creation of the root CA certificate.
+    #  The expiration for the root CA certificate is configured with the
+    #  "ca.expiry" field below, whose default value is "131400h" which is
+    #  15 years in hours.
+    #  The pathlength field is used to limit CA certificate hierarchy as described
+    #  in section 4.2.1.9 of RFC 5280.
+    #  Examples:
+    #  1) No pathlength value means no limit is requested.
+    #  2) pathlength == 1 means a limit of 1 is requested which is the default for
+    #     a root CA.  This means the root CA can issue intermediate CA certificates,
+    #     but these intermediate CAs may not in turn issue other CA certificates
+    #     though they can still issue end entity certificates.
+    #  3) pathlength == 0 means a limit of 0 is requested;
+    #     this is the default for an intermediate CA, which means it can not issue
+    #     CA certificates though it can still issue end entity certificates.
+    ###########################################################################
+    csr:
+      ca:
+        expiry: 131400h
+        pathlength: 0
+      cn: ca
+      hosts:
+      - localhost
+      - ca.customer2-net.org3proxy.phoenixblockchain.com
+      names:
+      - C: US
+        L: ""
+        O: Hyperledger
+        OU: North Carolina
+        ST: ""
+
+    #############################################################################
+    # BCCSP (BlockChain Crypto Service Provider) section is used to select which
+    # crypto library implementation to use
+    #############################################################################
+    bccsp:
+      default: SW
+      sw:
+        hash: SHA2
+        security: "256"
+
+    #############################################################################
+    # Multi CA section (unused in a K8S deployment)
+    #############################################################################
+    cacount:
+    cafiles:
+    - /var/hyperledger/fabric-ca/fabric-ca-server-config-tls.yaml
+
+    #############################################################################
+    # Intermediate CA section
+    #############################################################################
+    intermediate:
+      parentServer:
+        caName: ""
+        url: ""
+
+    #############################################################################
+    # Extra configuration options
+    # .e.g to enable adding and removing affiliations or identities
+    #############################################################################
+    cfg:
+      affiliations:
+        allowRemove: true
+      identities:
+        allowRemove: true
+
+    operations:
+      # host and port for the operations server
+      listenAddress: 0.0.0.0:9443
+
+      # TLS configuration for the operations endpoint
+      tls:
+        # TLS enabled
+        enabled: false
+
+        # path to PEM encoded server certificate for the operations server
+        cert:
+          file: tls/server.crt
+
+        # path to PEM encoded server key for the operations server
+        key:
+          file: tls/server.key
+
+        # require client certificate authentication to access all resources
+        clientAuthRequired: false
+
+        # paths to PEM encoded ca certificates to trust for client authentication
+        clientRootCAs:
+          files: []
+---
+# Source: hlf-ca/templates/pvc.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: customer2-ca
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+spec:
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: "1Gi"
+  storageClassName: "customer2-azure-storageclass"
+---
+# Source: hlf-ca/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer2-ca
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+spec:
+  type: "ClusterIP"
+  ports:
+    - port: 7054
+      targetPort: 7054
+      protocol: TCP
+      name: http
+    - port: 9443
+      targetPort: 9443
+      protocol: TCP
+      name: operations
+  selector:
+    app: hlf-ca
+    release: customer2-ca
+---
+# Source: hlf-ca/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer2-ca
+  labels:
+    app: hlf-ca
+    heritage: "Helm"
+    release: "customer2-ca"
+    chart: hlf-ca-1.3.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hlf-ca
+      release: customer2-ca
+  # Ensure we allow our pod to be unavailable, so we can upgrade
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        checksum/secret--ca: 7ac2cbd988cde02fabe5f88facc1272022f5d43c93d3cbc2fdfcdd85c2cd
+        checksum/secret--msp-tls-cryptomaterial: 0f99fa2699aa0dd73a3192c92de5d5c61043950a5e1d29c19e616ec71290
+        checksum/secret--tls-cryptomaterial: 918109d4a81124ee5361d5a13da489072fd99ed529899d2980d03a93642b
+        checksum/secret--msp-cryptomaterial: 71f5ff6b283279556c3da80af8f3f2db895f2bbf70512bbd27e88565e20a
+        checksum/configmap--ca: dbc8eacf1b096849c3480b522154cae70391246398c385bf2ed44ce166ca
+        checksum/configmap--config: 0e92150c1ecae6075c410a7f4a4cee34857b3190a6ac4af707fde88656f9
+        checksum/configmap--config-tls: 1a74c492bb75539bf5dbdd5e30502cc52978fcb489c88cc96ee67e7aa3a2
+        app: hlf-ca
+        heritage: "Helm"
+        release: "customer2-ca"
+        chart: hlf-ca-1.3.0
+    spec:
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: customer2-ca
+        - name: tls-secret
+          secret:
+            secretName: customer2-ca--tls-cryptomaterial
+        - name: ca-config
+          configMap:
+            name: customer2-ca--config
+        - name: ca-config-tls
+          configMap:
+            name: customer2-ca--config-tls
+        - name: msp-cryptomaterial
+          secret:
+            secretName: customer2-ca--msp-cryptomaterial
+        - name: msp-tls-cryptomaterial
+          secret:
+            secretName: customer2-ca--msp-tls-cryptomaterial
+      containers:
+        - name: ca
+          image: "hyperledger/fabric-ca:1.5.6"
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -c
+            - |
+              mkdir -p $FABRIC_CA_HOME
+              cp /var/hyperledger/ca_config/ca.yaml $FABRIC_CA_HOME/fabric-ca-server-config.yaml
+              cp /var/hyperledger/ca_config_tls/fabric-ca-server-config.yaml $FABRIC_CA_HOME/fabric-ca-server-config-tls.yaml
+
+              echo ">\033[0;35m fabric-ca-server start \033[0m"
+              fabric-ca-server start
+          envFrom:
+            - secretRef:
+                name: customer2-ca--ca
+            - configMapRef:
+                name: customer2-ca--ca
+          ports:
+            - name: ca-port
+              containerPort: 7054
+              protocol: TCP
+            - name: operations-port
+              containerPort: 9443
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /cainfo
+              port: 7054
+              scheme: HTTPS
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /cainfo
+              port: 7054
+              scheme: HTTPS
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          volumeMounts:
+            - name: data
+              mountPath: /var/hyperledger
+            - name: ca-config
+              readOnly: true
+              mountPath: /var/hyperledger/ca_config
+            - name: ca-config-tls
+              readOnly: true
+              mountPath: /var/hyperledger/ca_config_tls
+            - name: tls-secret
+              readOnly: true
+              mountPath: /var/hyperledger/tls/secret
+            - name: msp-cryptomaterial
+              readOnly: true
+              mountPath: /var/hyperledger/fabric-ca/msp-secret
+            - name: msp-tls-cryptomaterial
+              readOnly: true
+              mountPath: /var/hyperledger/fabric-ca/msp-tls-secret
+          resources:
+            limits:
+              cpu: 300m
+              memory: 256Mi
+            requests:
+              cpu: 10m
+              memory: 128Mi
+---
+# Source: hlf-ca/templates/istio-gateway.yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: customer2-ca-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 443
+        name: tcp
+        protocol: TLS
+      tls:
+        mode: PASSTHROUGH
+      hosts:
+          - ca.customer2-net.org3proxy.phoenixblockchain.com
+---
+# Source: hlf-ca/templates/virtualservice.yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: customer2-ca-virtualservice
+spec:
+  hosts:
+    - ca.customer2-net.org3proxy.phoenixblockchain.com
+  gateways:
+    - customer2-ca-gateway
+  tls:
+    - match:
+        - port: 443
+          sniHosts:
+              - ca.customer2-net.org3proxy.phoenixblockchain.com
+      route:
+        - destination:
+            host: customer2-ca
+            port:
+              number: 7054
+
